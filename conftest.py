@@ -1,4 +1,4 @@
-"""Pytest configuration for CRUCIBLE (direct runner, no network/wallet)."""
+"""Pytest configuration for GENDUEL (direct runner, no network/wallet)."""
 
 import pytest
 from gltest.direct.loader import deploy_contract as _direct_deploy_contract

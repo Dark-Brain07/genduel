@@ -1,4 +1,4 @@
-# gltest configuration for CRUCIBLE.
+# gltest configuration for GENDUEL.
 networks:
   default: studionet
 

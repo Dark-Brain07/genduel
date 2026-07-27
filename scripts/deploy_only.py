@@ -1,4 +1,4 @@
-"""Deploy a single CRUCIBLE instance to studionet and print its address."""
+"""Deploy a single GENDUEL instance to studionet and print its address."""
 from pathlib import Path
 
 from gltest_cli.config.general import get_general_config

@@ -1,6 +1,6 @@
 {
-  "project": "02-crucible",
-  "name": "Crucible",
+  "project": "02-genduel",
+  "name": "GenDuel",
   "network": "studionet",
   "chainId": 61999,
   "rpc": "https://studio.genlayer.com/api",

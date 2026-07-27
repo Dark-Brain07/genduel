@@ -1,5 +1,5 @@
 """
-Tests for CRUCIBLE (direct runner). The AI jury is mocked deterministically.
+Tests for GENDUEL (direct runner). The AI jury is mocked deterministically.
 
 Run with:  python -m pytest -v
 """
@@ -7,7 +7,7 @@ Run with:  python -m pytest -v
 import json
 from pathlib import Path
 
-CONTRACT = str(Path(__file__).resolve().parents[1] / "contracts" / "crucible.py")
+CONTRACT = str(Path(__file__).resolve().parents[1] / "contracts" / "genduel.py")
 
 GEN = 10 ** 18
 WAITING, LOCKED, DECIDED = 0, 1, 2
