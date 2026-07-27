@@ -2,7 +2,7 @@ import { makeReader, write, connectWallet, activeAccount, balanceOf, short, toGe
   from "./shared/genlayer-lite.js";
 import { icon, setIcons } from "./shared/icons.js";
 
-const CONTRACT = "0x1Dfa8D1987f33bB5f31158012340956468a144Ec";
+const CONTRACT = "0xeC412B00bc5E5999cb3D7EDD6cE1BB354B59C598";
 const { read } = makeReader(CONTRACT);
 
 const WAITING = 0, LOCKED = 1, DECIDED = 2;
@@ -23,13 +23,26 @@ function toast(msg, kind = "", title = "sys") {
   $("log").appendChild(el); setTimeout(() => el.remove(), kind === "err" ? 16000 : 5200);
 }
 
+let userDisconnected = false;
+
 async function refreshWallet() {
-  account = await activeAccount();
+  if (userDisconnected) {
+    account = null;
+  } else {
+    account = await activeAccount();
+  }
   const slot = $("walletslot");
-  if (account) { let bal = 0n; try { bal = await balanceOf(account); } catch (_) {} slot.innerHTML = `<span class="mono" style="font-size:12px;color:var(--txt2)">${short(account)} · ${toGen(bal)} GEN</span>`; }
+  if (account) { 
+    let bal = 0n; try { bal = await balanceOf(account); } catch (_) {} 
+    slot.innerHTML = `<span class="mono" style="font-size:12px;color:var(--txt2);display:inline-flex;align-items:center;gap:12px;">
+      ${short(account)} · ${toGen(bal)} GEN
+      <button class="btn sm ghost" style="padding:4px 8px;font-size:11px;border-width:2px;box-shadow:2px 2px 0px var(--line2);" id="disconnectBtn">Disconnect</button>
+    </span>`; 
+    $("disconnectBtn").onclick = () => { userDisconnected = true; refreshWallet(); };
+  }
   else { slot.innerHTML = `<button class="btn sm" id="connectBtn">Connect<span class="ic">${icon("arrowRight")}</span></button>`; $("connectBtn").onclick = doConnect; }
 }
-async function doConnect() { try { account = await connectWallet(); toast("Linked on studionet.", "ok", "wallet"); await refreshWallet(); } catch (e) { toast(fmtErr(e), "err", "wallet"); } }
+async function doConnect() { try { userDisconnected = false; account = await connectWallet(); toast("Linked on studionet.", "ok", "wallet"); await refreshWallet(); } catch (e) { toast(fmtErr(e), "err", "wallet"); } }
 async function ensureWallet() { if (!account) account = await connectWallet(); await refreshWallet(); }
 
 async function load() {

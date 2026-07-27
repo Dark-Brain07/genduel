@@ -1,6 +1,6 @@
 # { "Depends": "py-genlayer:1jb45aa8ynh2a9c9xn3b7qqh8sm5q93hwfp7jqmwsfhh8jpz09h6" }
 """
-CRUCIBLE - Staked 1v1 Debate, Judged by an AI Jury
+GENDUEL V1 - Staked 1v1 Debate, Judged by an AI Jury
 ===================================================
 Two challengers put GEN on the line and argue opposite sides of a motion. When
 both cases are in, the contract convenes an AI jury: the validator set reads
@@ -43,7 +43,7 @@ class Duel:
     rationale: str
 
 
-class Crucible(gl.Contract):
+class GenDuelV1(gl.Contract):
     duels: DynArray[Duel]
 
     def __init__(self) -> None:
