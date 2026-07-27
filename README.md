@@ -1,6 +1,6 @@
-# Crucible
+# GenDuel
 
-Crucible is a GenLayer staked-debate court: two parties enter a motion, commit matching GEN stakes, submit opposing cases, and let an intelligent contract adjudicate the record with live web evidence, LLM reasoning, validator-comparative consensus, challenges, appeals, settlement, and reputation.
+GenDuel is a GenLayer staked-debate court: two parties enter a motion, commit matching GEN stakes, submit opposing cases, and let an intelligent contract adjudicate the record with live web evidence, LLM reasoning, validator-comparative consensus, challenges, appeals, settlement, and reputation.
 
 This is not a landing-page mockup. The repository contains the static product UI, the deployed Studionet contract source, deployment metadata, smoke transaction evidence, and tests.
 
@@ -8,15 +8,15 @@ This is not a landing-page mockup. The repository contains the static product UI
 
 | Surface | Link |
 | --- | --- |
-| App | https://crucible-drab.vercel.app |
-| GitHub | https://github.com/thorbh2/crucible |
+| App | https://GenDuel-drab.vercel.app |
+| GitHub | https://github.com/thorbh2/GenDuel |
 | Contract | https://explorer-studio.genlayer.com/contracts/0x1Dfa8D1987f33bB5f31158012340956468a144Ec |
 | Deploy tx | https://explorer-studio.genlayer.com/tx/0x6903c1721d337d73dcae799dae4e221e0c4f3270e1c7ed7ade0c0b2aeb7a2a5f |
-| Vercel inspect | https://vercel.com/aspros-projects-07dbbeb8/crucible/ApNGk8At8cAsz9dFYGBS3uveqbJN |
+| Vercel inspect | https://vercel.com/aspros-projects-07dbbeb8/GenDuel/ApNGk8At8cAsz9dFYGBS3uveqbJN |
 
-## What Crucible Proves
+## What GenDuel Proves
 
-Crucible turns a debate into a verifiable dispute lifecycle:
+GenDuel turns a debate into a verifiable dispute lifecycle:
 
 1. A creator opens a duel and stakes GEN.
 2. A challenger accepts with an opposing case and matching stake.
@@ -32,7 +32,7 @@ The frontend preserves the original face-off arena UX, but the contract behind i
 
 | Area | Detail |
 | --- | --- |
-| Contract | `contracts/crucible_v2.py` |
+| Contract | `contracts/GenDuel_v2.py` |
 | Size | 43,516 bytes |
 | Network | GenLayer Studionet, chain id `61999` |
 | Write methods | 20 |
@@ -99,7 +99,7 @@ Static frontend repointed and Vercel-deployed
 
 ## Frontend
 
-Crucible ships as a static WebGL-styled face-off interface:
+GenDuel ships as a static WebGL-styled face-off interface:
 
 - split FOR / AGAINST composition
 - Three.js clash arena
