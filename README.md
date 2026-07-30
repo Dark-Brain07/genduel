@@ -9,7 +9,7 @@ This repository contains the static product UI, the deployed Studionet contract 
 | --- | --- |
 | **App** | [https://genduel.vercel.app](https://genduel.vercel.app) |
 | **GitHub** | [https://github.com/Dark-Brain07/genduel](https://github.com/Dark-Brain07/genduel) |
-| **Contract** | [View on GenLayer Studio Explorer](https://explorer-studio.genlayer.com/address/0xeC412B00bc5E5999cb3D7EDD6cE1BB354B59C598) |
+| **Contract** | [View on GenLayer Studio Explorer](https://explorer-studio.genlayer.com/address/0x7D1bE69A3865495C3BAF901bc304518db0B685DD) |
 | **Vercel Project** | [View Vercel Dashboard](https://vercel.com/md-raju-ahmeds-projects-a8ce4550/genduel) |
 
 ## What GenDuel Proves
@@ -62,7 +62,7 @@ draft_duel
 
 ## Verification Trail
 The deployed contract was successfully deployed and smoke-tested on the GenLayer Studionet.
-- **Contract Address:** `0xeC412B00bc5E5999cb3D7EDD6cE1BB354B59C598`
+- **Contract Address:** `0x7D1bE69A3865495C3BAF901bc304518db0B685DD`
 - **Frontend Integrated:** Yes, via `genlayer-lite.js`.
 - **Test Result:** All smoke writes and read assertions passed.
 

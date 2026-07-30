@@ -2,7 +2,7 @@ import { makeReader, write, connectWallet, activeAccount, balanceOf, short, toGe
   from "./shared/genlayer-lite.js";
 import { icon, setIcons } from "./shared/icons.js";
 
-const CONTRACT = "0xBD43bB3e9Fc4dA1F9F56a523D989e42463377cA6";
+const CONTRACT = "0x7D1bE69A3865495C3BAF901bc304518db0B685DD";
 const { read } = makeReader(CONTRACT);
 
 const WAITING = 0, LOCKED = 1, DECIDED = 2;
